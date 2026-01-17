@@ -1,86 +1,79 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Patrice Cazaux — Profil Formateur</title>
+  <title>Patrice Cazaux — Profil formateur</title>
   <meta name="description" content="One-page profil formateur — Patrice Cazaux (Flow Buster)." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
 
   <header class="topbar">
-    <div class="wrap topbar__inner">
+    <div class="container topbar__inner">
       <div class="brand">
-        <div class="brand__dot" aria-hidden="true"></div>
-        <div class="brand__text">
+        <span class="brand__dot"></span>
+        <div class="brand__txt">
           <div class="brand__name">Flow Buster</div>
           <div class="brand__tag">One-page profil formateur</div>
         </div>
       </div>
 
-      <div class="topbar__actions">
-        <a class="btn btn--primary" href="mailto:contact@flowbuster.fr">Proposer une mission</a>
-        <button class="btn btn--ghost" type="button" data-scroll="#parcours">Voir le parcours</button>
-      </div>
+      <nav class="topbar__actions" aria-label="Actions">
+        <a class="btn btn--ghost" href="#contact">Contact direct</a>
+        <a class="btn btn--primary" href="#mission">Proposer une mission</a>
+      </nav>
     </div>
   </header>
 
-  <main id="contenu" class="wrap">
-
+  <main id="contenu" class="container">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="contact">
       <div class="card hero__left">
         <div class="hero__head">
-          <div class="avatar">
-            <!-- Remplace src si besoin -->
-            <img src="assets/photo.jpg" alt="Photo de Patrice Cazaux" />
-          </div>
-
+          <img class="avatar" src="patrice.jpg" alt="Photo de Patrice Cazaux">
           <div class="hero__title">
             <h1>Patrice Cazaux</h1>
-            <p class="hero__subtitle">
-              <strong class="accent">Formateur expert</strong> en management, recrutement, RPS &amp; biais cognitifs
-            </p>
-
-            <p class="hero__baseline">Transmission &amp; ancrage des compétences</p>
-
-            <div class="chips" aria-label="Positionnement">
-              <span class="chip">Organismes de formation</span>
-              <span class="chip">Entreprises (B2B)</span>
-              <span class="chip">Présentiel &amp; distanciel</span>
-              <span class="chip">Ingénierie pédagogique</span>
-            </div>
+            <p class="subtitle">Formateur expert en management, recrutement, RPS &amp; biais cognitifs</p>
+            <p class="kicker">Transmission &amp; ancrage des compétences</p>
           </div>
+        </div>
+
+        <div class="chips" aria-label="Cibles et modalités">
+          <span class="chip">Organismes de formation</span>
+          <span class="chip">Entreprises (B2B)</span>
+          <span class="chip">Présentiel &amp; distanciel</span>
+          <span class="chip">Ingénierie pédagogique</span>
         </div>
 
         <div class="hero__contact">
           <div class="contact-row">
-            <span class="ico" aria-hidden="true">✉️</span>
-            <span><strong>contact@flowbuster.fr</strong></span>
+            <span class="icon" aria-hidden="true">✉️</span>
+            <a class="contact-strong" href="mailto:contact@flowbuster.fr">contact@flowbuster.fr</a>
           </div>
           <div class="contact-row">
-            <span class="ico" aria-hidden="true">📞</span>
-            <span><strong>07 60 96 21 92</strong></span>
+            <span class="icon" aria-hidden="true">📞</span>
+            <a class="contact-strong" href="tel:+33760962192">07 60 96 21 92</a>
           </div>
           <div class="contact-row">
-            <span class="ico" aria-hidden="true">📍</span>
+            <span class="icon" aria-hidden="true">📍</span>
             <span>Bordeaux / Nouvelle-Aquitaine</span>
           </div>
         </div>
 
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="mailto:contact@flowbuster.fr">Proposer une mission</a>
-          <button class="btn btn--ghost" type="button" data-scroll="#contact">Contact direct</button>
+        <div class="hero__cta" id="mission">
+          <a class="btn btn--primary" href="mailto:contact@flowbuster.fr?subject=Mission%20-%20Flow%20Buster">Proposer une mission</a>
+          <a class="btn btn--ghost" href="#parcours">Voir le parcours</a>
         </div>
       </div>
 
-      <aside class="card hero__right section--coral">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🎓</span>
+      <aside class="card hero__right">
+        <div class="section-title">
           <h2>Une phrase qui résume la posture</h2>
+          <div class="rule rule--blue"></div>
         </div>
 
         <blockquote class="quote">
@@ -88,27 +81,33 @@
           <footer>— Professeur Keating</footer>
         </blockquote>
 
-        <div class="chips chips--tight" aria-label="Style">
-          <span class="chip chip--soft">Style : direct, utile, terrain</span>
-          <span class="chip chip--soft">Angle : exigence + humanité</span>
+        <div class="micro-notes">
+          <div class="micro-note">
+            <span class="badge badge--green">Style</span>
+            <span>Direct, utile, terrain</span>
+          </div>
+          <div class="micro-note">
+            <span class="badge badge--yellow">Angle</span>
+            <span>Exigence + humanité</span>
+          </div>
         </div>
       </aside>
     </section>
 
-    <!-- APPROCHE PÉDAGOGIQUE (sous le hero, comme demandé) -->
-    <section id="approche" class="section">
-      <div class="section__header section--green">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🎓</span>
-          <h2>Approche pédagogique</h2>
+    <!-- APPROCHE -->
+    <section class="section" aria-label="Approche pédagogique">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>🎓 Approche pédagogique</h2>
+          <p class="muted">Du concret, de l’expérience, et une ingénierie adulte assumée.</p>
         </div>
-        <p class="section__subtitle">Du concret, du transfert, et des repères actionnables.</p>
-      </div>
+        <div class="rule rule--coral"></div>
+      </header>
 
       <div class="grid-2">
-        <article class="card">
+        <div class="card">
           <h3>Une pédagogie active, orientée transfert</h3>
-          <ul class="list">
+          <ul class="bullets">
             <li>Pédagogies actives &amp; expérientielles</li>
             <li>Mises en situation, études de cas, jeux de rôle</li>
             <li>Apports théoriques orientés terrain</li>
@@ -116,355 +115,321 @@
             <li>Adaptation aux publics &amp; aux contextes</li>
             <li>Débriefs structurés (on transforme l’action en compétence)</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="card">
-          <h3>Ce que j’apporte en intervention</h3>
+        <div class="card">
+          <h3>Ce qui est apporté en intervention</h3>
           <p class="muted">Ancrage, évaluation concrète, retours d’expérience, partage.</p>
-          <ul class="list">
-            <li><strong>Ancrage</strong> : exercices, répétition utile, transfert immédiat</li>
-            <li><strong>Évaluation</strong> : repères clairs, feedback actionnable</li>
-            <li><strong>Retour d’expérience</strong> : cas réels, nuances, “voilà ce qui marche”</li>
-            <li><strong>Partage</strong> : co-construction, intelligence collective, mise en commun</li>
-            <li><strong>Progression visible</strong> : points de passage, synthèses, objectifs courts</li>
-            <li><strong>Cadre</strong> : rythme, posture, sécurité du groupe</li>
+          <ul class="bullets bullets--tight">
+            <li><b>Ancrage</b> : exercices, répétition utile, transfert immédiat</li>
+            <li><b>Évaluation</b> : repères clairs, feedback actionnable</li>
+            <li><b>Retour d’expérience</b> : cas réels, nuances, “voilà ce qui marche”</li>
+            <li><b>Partage</b> : co-construction, intelligence collective, mise en commun</li>
+            <li><b>Progression visible</b> : points de passage, synthèses, objectifs courts</li>
+            <li><b>Cadre</b> : rythme, posture, sécurité du groupe</li>
           </ul>
-        </article>
+        </div>
       </div>
     </section>
 
     <!-- PARCOURS -->
-    <section id="parcours" class="section">
-      <div class="section__header section--blue">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🏗️</span>
-          <h2>Parcours &amp; valeur d’intervention</h2>
+    <section class="section" id="parcours" aria-label="Parcours et valeur d'intervention">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>🏗️ Parcours &amp; valeur d’intervention</h2>
+          <p class="muted">Deux piliers : la formation adulte + 20 ans de management (le terrain, le vrai).</p>
         </div>
-        <p class="section__subtitle">Deux piliers : la formation adulte + 20 ans de management (le terrain, le vrai).</p>
-      </div>
+        <div class="rule rule--green"></div>
+      </header>
 
-      <!-- Deux cartes de même gabarit -->
       <div class="grid-2">
-        <article class="card card--stripe card--stripe-blue">
+        <!-- Col gauche -->
+        <div class="card">
           <h3>Formateur professionnel d’adultes — interventions pour organismes de formation</h3>
-          <p>Conception et animation de dispositifs orientés terrain, dans le respect de l’ingénierie pédagogique adultes.</p>
+          <p class="muted">Conception et animation de dispositifs orientés terrain, dans le respect de l’ingénierie pédagogique adultes.</p>
 
           <div class="split">
             <div>
               <h4>Modules conçus et animés</h4>
-              <ul class="list">
-                <li><strong>Module IA appliquée</strong> — cadre FPA</li>
-                <li><strong>Module “Recrutement saisonnier”</strong> — entreprise <em>Mode SARL</em></li>
+              <ul class="bullets bullets--tight">
+                <li><b>Module IA appliquée</b> — cadre FPA</li>
+                <li><b>Module “Recrutement saisonnier”</b> — entreprise <i>Mode SARL</i></li>
               </ul>
             </div>
 
             <div>
               <h4>Mots-clés (attendus OF)</h4>
-              <div class="chips">
-                <span class="chip">Écoute</span>
-                <span class="chip">Adaptabilité</span>
-                <span class="chip">Pédagogie</span>
-                <span class="chip">Analyse</span>
-                <span class="chip">Posture</span>
-                <span class="chip">Clarté</span>
+              <div class="chips chips--wrap">
+                <span class="chip chip--soft">Écoute</span>
+                <span class="chip chip--soft">Adaptabilité</span>
+                <span class="chip chip--soft">Pédagogie</span>
+                <span class="chip chip--soft">Analyse</span>
+                <span class="chip chip--soft">Posture</span>
+                <span class="chip chip--soft">Clarté</span>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="card card--stripe card--stripe-green">
+        <!-- Col droite (même modèle) -->
+        <div class="card">
           <h3>20 ans de management &amp; développement des compétences (2004–2024)</h3>
-          <p>Management d’équipes, recrutement, formation interne et accompagnement de la performance dans des environnements exigeants.</p>
+          <p class="muted">Management d’équipes, recrutement, formation interne et accompagnement de la performance dans des environnements exigeants.</p>
 
           <div class="split">
             <div>
               <h4>Repères terrain (en bref)</h4>
-              <ul class="list">
-                <li><strong>100+</strong> collaborateurs accompagnés</li>
-                <li><strong>3 villes</strong> : Toulouse • Nancy • Bordeaux</li>
-                <li><strong>B2B</strong> : télévente &amp; terrain</li>
-                <li><strong>5</strong> changements majeurs de stratégie pilotés</li>
+              <ul class="bullets bullets--tight">
+                <li><b>100+ collaborateurs</b> accompagnés</li>
+                <li><b>3 villes</b> : Toulouse • Nancy • Bordeaux</li>
+                <li><b>B2B</b> : télévente &amp; terrain</li>
+                <li><b>5 changements majeurs</b> de stratégie pilotés</li>
               </ul>
             </div>
 
             <div>
               <h4>Mots-clés transférables</h4>
-              <div class="chips">
-                <span class="chip">Leadership</span>
-                <span class="chip">Accompagnement</span>
-                <span class="chip">Coaching</span>
-                <span class="chip">Développement</span>
-                <span class="chip">Recul</span>
-                <span class="chip">Fédérer</span>
+              <div class="chips chips--wrap">
+                <span class="chip chip--soft">Leadership</span>
+                <span class="chip chip--soft">Accompagnement</span>
+                <span class="chip chip--soft">Coaching</span>
+                <span class="chip chip--soft">Développement</span>
+                <span class="chip chip--soft">Recul</span>
+                <span class="chip chip--soft">Fédérer</span>
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERTISES CLÉS -->
-    <section class="section">
-      <div class="section__header section--yellow">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🧠</span>
-          <h2>Expertises clés</h2>
+    <!-- EXPERTISES -->
+    <section class="section" aria-label="Expertises clés">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>🧠 Expertises clés</h2>
+          <p class="muted">Clair, assumé, utile pour un catalogue de formation.</p>
         </div>
-        <p class="section__subtitle">Clair, assumé, utile pour un catalogue de formation.</p>
-      </div>
+        <div class="rule rule--blue"></div>
+      </header>
 
       <div class="grid-3">
-        <article class="card card--stripe card--stripe-coral">
+        <div class="card">
           <h3>Management</h3>
           <p>Posture, efficacité opérationnelle, régulation.</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+        </div>
+        <div class="card">
           <h3>Recrutement</h3>
-          <p>Évaluation, entretien, intégration.</p>
-        </article>
-        <article class="card card--stripe card--stripe-green">
+          <p>Évaluation, entretien, décision, intégration.</p>
+        </div>
+        <div class="card">
           <h3>RPS</h3>
           <p>Prévention, signaux faibles, actions concrètes.</p>
-        </article>
-        <article class="card card--stripe card--stripe-yellow">
+        </div>
+        <div class="card">
           <h3>Biais cognitifs</h3>
-          <p>Attention, erreurs à débusquer, lucidité.</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+          <p>Décision, attention, erreurs à débusquer.</p>
+        </div>
+        <div class="card">
           <h3>Performance collective</h3>
           <p>Cadre, coopération, engagement.</p>
-        </article>
-        <article class="card card--stripe card--stripe-green">
+        </div>
+        <div class="card">
           <h3>Ingénierie pédagogique</h3>
           <p>Objectifs, scénarisation, évaluation, adaptation.</p>
-        </article>
+        </div>
       </div>
     </section>
 
     <!-- OUTILS -->
-    <section class="section">
-      <div class="section__header section--coral">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🛠️</span>
-          <h2>Outils &amp; environnement numérique</h2>
+    <section class="section" aria-label="Outils et environnement numérique">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>🧰 Outils &amp; environnement numérique (maîtrisé)</h2>
+          <p class="muted">Par familles, parce qu’un dispositif propre commence par une organisation propre.</p>
         </div>
-        <p class="section__subtitle">Par familles, parce qu’un dispositif propre commence par une organisation propre.</p>
-      </div>
+        <div class="rule rule--yellow"></div>
+      </header>
 
       <div class="grid-3">
-        <article class="card card--stripe card--stripe-coral">
+        <div class="card">
           <h3>Création &amp; supports</h3>
           <p>Canva • PowerPoint</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+        </div>
+        <div class="card">
           <h3>Collaboration &amp; partage</h3>
           <p>Trello • Google Drive • OneDrive</p>
-        </article>
-        <article class="card card--stripe card--stripe-green">
+        </div>
+        <div class="card">
           <h3>Communication &amp; distanciel</h3>
           <p>Google Meet • Microsoft Teams</p>
-        </article>
-        <article class="card card--stripe card--stripe-yellow">
+        </div>
+        <div class="card">
           <h3>Évaluation &amp; animation</h3>
           <p>Kahoot • Klaxoon</p>
-        </article>
-        <article class="card card--stripe card--stripe-green">
+        </div>
+        <div class="card">
           <h3>IA appliquée</h3>
           <p>ChatGPT • Gemini • Mistral</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+        </div>
+        <div class="card">
           <h3>Suite bureautique</h3>
           <p>Docs • Sheets • Slides • Excel</p>
-        </article>
+        </div>
       </div>
     </section>
 
     <!-- ENGAGEMENTS -->
-    <section class="section">
-      <div class="section__header section--green">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">🚀</span>
-          <h2>Engagements &amp; projets</h2>
+    <section class="section" aria-label="Engagements et projets">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>🚀 Engagements &amp; projets</h2>
+          <p class="muted">Ce qui raconte le collectif, l’énergie, et le goût pour la transmission.</p>
         </div>
-        <p class="section__subtitle">Ce qui raconte ton collectif, ton énergie, et ton goût pour la transmission.</p>
-      </div>
+        <div class="rule rule--green"></div>
+      </header>
 
       <div class="grid-3">
-        <article class="card card--stripe card--stripe-coral">
+        <div class="card">
           <h3>Flow Buster</h3>
-          <p><strong>Fondateur</strong> — organisme &amp; marque de formation.</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+          <p><b>Fondateur</b> — organisme &amp; marque de formation.</p>
+        </div>
+        <div class="card">
           <h3>Handball</h3>
           <p>Coach (-13) &amp; partenaire Bruges Handball</p>
-        </article>
-        <article class="card card--stripe card--stripe-green">
+        </div>
+        <div class="card">
           <h3>Bordeaux Confidentiel</h3>
           <p>Cofondateur</p>
-        </article>
-        <article class="card card--stripe card--stripe-yellow">
+        </div>
+        <div class="card">
           <h3>Octopod</h3>
           <p>Co-animateur du podcast</p>
-        </article>
-        <article class="card card--stripe card--stripe-coral">
+        </div>
+        <div class="card">
           <h3>Coach Buster</h3>
           <p>Cofondateur (podcast &amp; blog)</p>
-        </article>
-        <article class="card card--stripe card--stripe-blue">
+        </div>
+        <div class="card">
           <h3>Réseau entrepreneurs</h3>
           <p>Échanges, veille, entraide (et 2–3 bonnes idées par semaine, minimum).</p>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- PASSIONS (la partie fun, colorée, pas en liste) -->
-    <section class="section" id="passions">
-      <div class="section__header section--yellow">
-        <div class="section__title">
-          <span class="section__icon" aria-hidden="true">💚</span>
-          <h2>Passions</h2>
+    <!-- PASSIONS -->
+    <section class="section passions" aria-label="Passions">
+      <header class="section-head">
+        <div class="section-head__left">
+          <h2>💚 Passions</h2>
+          <p class="muted">Ici, un peu de couleur. Et un peu de mauvaise foi assumée.</p>
         </div>
-        <p class="section__subtitle">Ici, on met un peu de couleur. Et un peu de mauvaise foi assumée.</p>
-      </div>
+        <div class="rule rule--coral"></div>
+      </header>
 
-      <div class="passions">
-        <!-- Les boutons (chips) -->
-        <div class="passions__chips" role="tablist" aria-label="Passions">
-          <button class="pchip pchip--coral" type="button" data-passion="cinema" aria-expanded="false">
-            🎬 Cinéma / séries
-          </button>
-          <button class="pchip pchip--blue" type="button" data-passion="musique" aria-expanded="false">
-            🎧 Musique
-          </button>
-          <button class="pchip pchip--green" type="button" data-passion="padel" aria-expanded="false">
-            🎾 Padel
-          </button>
-          <button class="pchip pchip--yellow" type="button" data-passion="run" aria-expanded="false">
-            🏃 Run
-          </button>
-          <button class="pchip pchip--blue" type="button" data-passion="jeux" aria-expanded="false">
-            🎲 Jeux de société
-          </button>
-          <button class="pchip pchip--green" type="button" data-passion="section" aria-expanded="false">
-            🏉 Section Paloise
-          </button>
-          <button class="pchip pchip--coral" type="button" data-passion="pere" aria-expanded="false">
-            👨‍👧‍👦 Père de deux enfants
-          </button>
+      <div class="passions__wrap">
+        <div class="passions__tabs" role="tablist" aria-label="Sélecteur de passions">
+          <button class="passion-btn is-active" data-target="#p-cinema" aria-expanded="true">🎬 Cinéma / séries</button>
+          <button class="passion-btn" data-target="#p-musique" aria-expanded="false">🎧 Musique</button>
+          <button class="passion-btn" data-target="#p-padel" aria-expanded="false">🎾 Padel</button>
+          <button class="passion-btn" data-target="#p-run" aria-expanded="false">🏃 Run</button>
+          <button class="passion-btn" data-target="#p-jeux" aria-expanded="false">🎲 Jeux de société</button>
+          <button class="passion-btn" data-target="#p-section" aria-expanded="false">🏉 Section Paloise</button>
+          <button class="passion-btn" data-target="#p-pere" aria-expanded="false">🧠 Père de deux enfants</button>
         </div>
 
-        <!-- Les cartes qui apparaissent -->
-        <div class="passions__panels">
-          <article class="pcard pcard--coral" id="cinema" hidden>
+        <div class="passions__panel card">
+          <div id="p-cinema" class="passion-panel">
             <h3>🎬 Cinéma / séries</h3>
-            <p>
-              Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Ridley Scott,
-              les frères Coen, Lynch… Il y en a trop.
-              Et je suis pas loin de <strong>70 jours</strong> de visionnage sur une vie
-              (je te laisse faire le calcul…).
-            </p>
-          </article>
+            <p>Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Ridley Scott, les frères Coen, Lynch… Il y en a trop.</p>
+            <p class="muted">Environ 70 jours de visionnage sur une vie. Oui, le calcul est laissé au lecteur.</p>
+          </div>
 
-          <article class="pcard pcard--blue" id="musique" hidden>
+          <div id="p-musique" class="passion-panel" hidden>
             <h3>🎧 Musique</h3>
-            <p>
-              Ça fait mal de le dire mais <strong>les anglais</strong> sont au-dessus de la mêlée.
-              Dans les <strong>1%</strong> qui ont le plus écouté Radiohead et les Strokes en 2025.
-              <strong>800</strong> artistes écoutés et <strong>8</strong> concerts (source : Deezer &amp; moi).
-            </p>
-          </article>
+            <p>Les anglais sont au-dessus de la mêlée. Oui, ça fait mal de le dire.</p>
+            <ul class="bullets bullets--tight">
+              <li>Top 1% sur Radiohead &amp; The Strokes en 2025</li>
+              <li>800 artistes écoutés, 8 concerts (source : Deezer… et moi)</li>
+            </ul>
+          </div>
 
-          <article class="pcard pcard--green" id="padel" hidden>
+          <div id="p-padel" class="passion-panel" hidden>
             <h3>🎾 Padel</h3>
-            <p>
-              <strong>Niveau 8</strong> avant de rentrer sur la piste.
-              Et puis les premières briques fusent sur la vitre.
-              La bonne nouvelle : j’ai une <strong>énorme marge de progression</strong>…
-              et c’est presque rassurant.
-            </p>
-          </article>
+            <p><b>Niveau 8</b> avant de rentrer sur la piste.</p>
+            <p>Et puis les premières briques fusent sur la vitre. La bonne nouvelle : une énorme marge de progression.</p>
+          </div>
 
-          <article class="pcard pcard--yellow" id="run" hidden>
+          <div id="p-run" class="passion-panel" hidden>
             <h3>🏃 Run</h3>
-            <p>
-              Feignant avant, content après.
-              Autour de <strong>20 km</strong> par semaine.
-              Mes genoux commencent à grincer, mais ça reste vital pour l’esprit.
-            </p>
-          </article>
+            <p>Fainéant avant, content après. Autour de 20 km par semaine.</p>
+            <p class="muted">Les genoux commencent à grincer… mais ça reste vital pour l’esprit.</p>
+          </div>
 
-          <article class="pcard pcard--blue" id="jeux" hidden>
+          <div id="p-jeux" class="passion-panel" hidden>
             <h3>🎲 Jeux de société</h3>
-            <p>
-              Pour le partage, pour se marrer… et un peu pour gagner.
-              Jamais mauvais joueur mais <strong>très</strong> (trop, dirait ma femme) engagé.
-            </p>
-          </article>
+            <p>Pour le partage, pour se marrer… et un peu pour gagner.</p>
+            <p class="muted">Jamais mauvais joueur, mais très (trop, dirait ma femme) engagé.</p>
+          </div>
 
-          <article class="pcard pcard--green" id="section" hidden>
+          <div id="p-section" class="passion-panel" hidden>
             <h3>🏉 Section Paloise</h3>
-            <p>
-              En souffrance depuis <strong>35 ans</strong>. Pas de titre, mais toujours là.
-              <strong>2026</strong> est un bon cru : ça me permet de développer mon chauvinisme
-              et de pratiquer la mauvaise foi avec fierté.
-            </p>
-          </article>
+            <p>En souffrance depuis 35 ans. Pas de titre, mais toujours là.</p>
+            <p class="muted">2026 s’annonce comme un bon cru : chauvinisme assumé et mauvaise foi pratiquée avec fierté.</p>
+          </div>
 
-          <article class="pcard pcard--coral" id="pere" hidden>
-            <h3>👨‍👧‍👦 Père de deux enfants</h3>
-            <p>
-              Apprentissage intensif h24, 7j/7. Aucun scénario pédagogique ne prépare à ça.
-              Intensité de bonheur, fierté, patience, adaptation, peur, agacement…
-              et <strong>beaucoup d’amour</strong>, toujours.
-            </p>
-          </article>
+          <div id="p-pere" class="passion-panel" hidden>
+            <h3>🧠 Père de deux enfants</h3>
+            <p>Apprentissage intensif h24, 7j/7. Aucun scénario pédagogique ne prépare à ça.</p>
+            <p class="muted">Intensité de bonheur, fierté, patience, adaptation, peur, agacement… et beaucoup d’amour, toujours.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
       <div class="footer__actions">
-        <a class="btn btn--primary" href="mailto:contact@flowbuster.fr">Contact direct</a>
-        <button class="btn btn--ghost" type="button" data-scroll="body">Remonter</button>
+        <a class="btn btn--ghost" href="#contact">Contact direct</a>
+        <a class="btn btn--ghost" href="#contenu">Remonter</a>
       </div>
-      <div class="footer__meta">© Flow Buster — One-page profil formateur</div>
+      <div class="footer__copy">© Flow Buster — One-page profil formateur</div>
     </footer>
   </main>
 
   <script src="script.js"></script>
-  // Scroll doux
-document.querySelectorAll("[data-scroll]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const target = btn.getAttribute("data-scroll");
-    const el = target === "body" ? document.body : document.querySelector(target);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.addEventListener("DOMContentLoaded", () => {
+  const buttons = Array.from(document.querySelectorAll(".passion-btn"));
+  if (!buttons.length) return;
+
+  const panels = Array.from(document.querySelectorAll(".passion-panel"));
+
+  const setActive = (btn) => {
+    const target = btn.getAttribute("data-target");
+    if (!target) return;
+
+    // boutons
+    buttons.forEach(b => {
+      b.classList.toggle("is-active", b === btn);
+      b.setAttribute("aria-expanded", b === btn ? "true" : "false");
+    });
+
+    // panneaux
+    panels.forEach(p => p.setAttribute("hidden", ""));
+    const panel = document.querySelector(target);
+    if (panel) panel.removeAttribute("hidden");
+  };
+
+  // sécurité : si un "Déplier" a été collé au texte
+  buttons.forEach((b) => {
+    b.textContent = b.textContent.replace(/\s*Déplier\s*$/i, "").trim();
   });
-});
 
-// Passions : boutons -> cartes
-const chips = Array.from(document.querySelectorAll(".pchip"));
-const panels = Array.from(document.querySelectorAll(".pcard"));
+  // init: ouvre celui qui a is-active sinon le premier
+  const initBtn = buttons.find(b => b.classList.contains("is-active")) || buttons[0];
+  setActive(initBtn);
 
-function closeAll() {
-  chips.forEach(c => c.setAttribute("aria-expanded", "false"));
-  panels.forEach(p => p.hidden = true);
-}
-
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => {
-    const id = chip.getAttribute("data-passion");
-    const panel = document.getElementById(id);
-    if (!panel) return;
-
-    const isOpen = chip.getAttribute("aria-expanded") === "true";
-    closeAll();
-    if (!isOpen) {
-      chip.setAttribute("aria-expanded", "true");
-      panel.hidden = false;
-      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => setActive(btn));
   });
 });
 </body>
