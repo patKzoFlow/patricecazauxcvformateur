@@ -433,5 +433,39 @@
   </main>
 
   <script src="script.js"></script>
+  // Scroll doux
+document.querySelectorAll("[data-scroll]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const target = btn.getAttribute("data-scroll");
+    const el = target === "body" ? document.body : document.querySelector(target);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+// Passions : boutons -> cartes
+const chips = Array.from(document.querySelectorAll(".pchip"));
+const panels = Array.from(document.querySelectorAll(".pcard"));
+
+function closeAll() {
+  chips.forEach(c => c.setAttribute("aria-expanded", "false"));
+  panels.forEach(p => p.hidden = true);
+}
+
+chips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    const id = chip.getAttribute("data-passion");
+    const panel = document.getElementById(id);
+    if (!panel) return;
+
+    const isOpen = chip.getAttribute("aria-expanded") === "true";
+    closeAll();
+    if (!isOpen) {
+      chip.setAttribute("aria-expanded", "true");
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  });
+});
 </body>
 </html>
