@@ -3,113 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Patrice Cazaux — Profil formateur (Flow Buster)</title>
-  <meta name="description" content="One-page profil formateur — Patrice Cazaux (Flow Buster)." />
-
+  <title>Patrice Cazaux — Profil Formateur | Flow Buster</title>
+  <meta name="description" content="Profil one-page formateur — Patrice Cazaux (Flow Buster)." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
 
-  <header class="topbar" role="banner">
-    <div class="topbar__inner container">
+  <!-- Header -->
+  <header class="topbar">
+    <div class="topbar__inner">
       <div class="brand">
         <span class="brand__dot" aria-hidden="true"></span>
-        <div class="brand__txt">
+        <div class="brand__text">
           <div class="brand__name">Flow Buster</div>
           <div class="brand__tag">One-page profil formateur</div>
         </div>
       </div>
 
-      <nav class="topbar__actions" aria-label="Actions">
+      <nav class="topbar__actions" aria-label="Actions principales">
         <a class="btn btn--ghost" href="#contact">Contact</a>
         <a class="btn btn--primary" href="#mission">Proposer une mission</a>
       </nav>
     </div>
   </header>
 
-  <main id="contenu" class="container" role="main">
-
+  <main id="contenu" class="page">
     <!-- HERO -->
     <section class="hero" aria-label="Présentation">
-      <div class="card hero__card">
-        <div class="hero__left">
-          <div class="avatar">
-            <img src="patrice.jpg" alt="Photo de Patrice Cazaux" />
-          </div>
-
-          <div class="hero__id">
-            <h1 class="hero__name">Patrice Cazaux</h1>
-            <p class="hero__role">Formateur expert en management, recrutement, RPS & biais cognitifs</p>
-            <p class="hero__line">Transmission & ancrage des compétences</p>
-
-            <div class="pill-row" aria-label="Cibles & formats">
-              <span class="pill">Organismes de formation</span>
-              <span class="pill">Entreprises (B2B)</span>
-              <span class="pill">Présentiel & distanciel</span>
-              <span class="pill">Ingénierie pédagogique</span>
-            </div>
-
-            <div class="hero__contact" id="contact">
-              <div class="contact-line">
-                <span class="ico" aria-hidden="true">✉️</span>
-                <a href="mailto:contact@flowbuster.fr"><strong>contact@flowbuster.fr</strong></a>
-              </div>
-              <div class="contact-line">
-                <span class="ico" aria-hidden="true">📞</span>
-                <a href="tel:+33760962192"><strong>07 60 96 21 92</strong></a>
-              </div>
-              <div class="contact-line">
-                <span class="ico" aria-hidden="true">📍</span>
-                <span>Bordeaux / Nouvelle-Aquitaine</span>
-              </div>
-            </div>
-
-            <div class="hero__cta" id="mission">
-              <a class="btn btn--primary" href="mailto:contact@flowbuster.fr?subject=Proposition%20de%20mission">Proposer une mission</a>
-              <a class="btn btn--ghost" href="#parcours">Voir le parcours</a>
+      <div class="grid-2">
+        <article class="card card--plain">
+          <div class="hero__row">
+            <img class="avatar" src="patrice.jpg" alt="Photo de Patrice Cazaux" />
+            <div class="hero__id">
+              <h1 class="hero__title">Patrice Cazaux</h1>
+              <p class="hero__subtitle">Formateur expert en management, recrutement, RPS &amp; biais cognitifs</p>
+              <p class="hero__baseline">Transmission &amp; ancrage des compétences</p>
             </div>
           </div>
-        </div>
+
+          <div class="chips" aria-label="Domaines d’intervention">
+            <span class="chip">Organismes de formation</span>
+            <span class="chip">Entreprises (B2B)</span>
+            <span class="chip">Présentiel &amp; distanciel</span>
+            <span class="chip">Ingénierie pédagogique</span>
+          </div>
+
+          <div id="contact" class="contact">
+            <div class="contact__item">
+              <span class="ico" aria-hidden="true">✉️</span>
+              <a href="mailto:contact@flowbuster.fr"><strong>contact@flowbuster.fr</strong></a>
+            </div>
+            <div class="contact__item">
+              <span class="ico" aria-hidden="true">📞</span>
+              <a href="tel:+33760962192"><strong>07 60 96 21 92</strong></a>
+            </div>
+            <div class="contact__item">
+              <span class="ico" aria-hidden="true">📍</span>
+              <span>Bordeaux / Nouvelle-Aquitaine</span>
+            </div>
+          </div>
+
+          <div id="mission" class="cta">
+            <a class="btn btn--primary" href="mailto:contact@flowbuster.fr?subject=Proposition%20de%20mission">Proposer une mission</a>
+            <a class="btn btn--ghost" href="#parcours">Voir le parcours</a>
+          </div>
+        </article>
+
+        <aside class="card card--stripe stripe--coral">
+          <h2 class="h2">Une phrase qui résume la posture</h2>
+          <blockquote class="quote">
+            <p>« Dès qu’on croit savoir quelque chose, il faut l’observer sous un autre angle. »</p>
+            <footer>— Professeur Keating</footer>
+          </blockquote>
+          <ul class="mini-list">
+            <li>Style : direct, utile, terrain</li>
+            <li>Angle : exigence + humanité</li>
+          </ul>
+        </aside>
       </div>
-
-      <aside class="card quote" aria-label="Posture">
-        <h2 class="h2">Une phrase qui résume la posture</h2>
-        <blockquote class="quote__box">
-          <p class="quote__txt">« Dès qu’on croit savoir quelque chose, il faut l’observer sous un autre angle. »</p>
-          <footer class="quote__by">— Professeur Keating</footer>
-        </blockquote>
-
-        <div class="quote__meta">
-          <div><span class="muted">Style :</span> Direct, utile, terrain</div>
-          <div><span class="muted">Angle :</span> Exigence + humanité</div>
-        </div>
-      </aside>
     </section>
 
     <!-- APPROCHE -->
-    <section class="section" aria-label="Approche pédagogique">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">🎓</span> Approche pédagogique</h2>
-        <p class="section__subtitle">Pédagogie active, transfert en situation de travail, évaluation intégrée.</p>
+    <section class="section" id="approche">
+      <header class="section__head">
+        <h2 class="section__title">🎓 Approche pédagogique</h2>
+        <p class="section__desc">Pédagogie active, transfert en situation de travail, évaluation intégrée.</p>
       </header>
 
       <div class="grid-2">
-        <article class="card">
-          <h3 class="card__title">Une pédagogie active, orientée transfert</h3>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Une pédagogie active, orientée transfert</h3>
           <ul class="bullets">
-            <li>Pédagogies actives & expérientielles</li>
+            <li>Pédagogies actives &amp; expérientielles</li>
             <li>Mises en situation, études de cas, jeux de rôle</li>
             <li>Apports structurés orientés terrain</li>
             <li>Évaluations progressives et traçables</li>
             <li>Adaptation aux publics et aux contextes</li>
-            <li>Débriefs structurés (on transforme l’action en compétence)</li>
+            <li>Débriefs structurés (transformer l’action en compétence)</li>
           </ul>
         </article>
 
-        <article class="card">
-          <h3 class="card__title">Ce qui est apporté en intervention</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Ce qui est apporté en intervention</h3>
           <p class="muted">Ancrage, évaluation concrète, retours d’expérience, partage.</p>
           <ul class="bullets">
             <li><strong>Ancrage</strong> : exercices, répétition utile, transfert immédiat</li>
@@ -124,86 +121,82 @@
     </section>
 
     <!-- PARCOURS -->
-    <section id="parcours" class="section" aria-label="Parcours & valeur d’intervention">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">🏗️</span> Parcours & valeur d’intervention</h2>
-        <p class="section__subtitle">Deux piliers : formation adulte + 20 ans de management (B2B télévente & terrain).</p>
+    <section class="section" id="parcours">
+      <header class="section__head">
+        <h2 class="section__title">🏗️ Parcours &amp; valeur d’intervention</h2>
+        <p class="section__desc">Deux piliers : formation adulte + 20 ans de management (B2B télévente &amp; terrain).</p>
       </header>
 
       <div class="grid-2">
-        <!-- PILIER FORMATION -->
-        <article class="card card--accent-a">
-          <h3 class="card__title">Formateur professionnel d’adultes — interventions pour organismes de formation</h3>
+        <!-- Formateur -->
+        <article class="card card--stripe stripe--blue">
+          <h3 class="h3">Formateur professionnel d’adultes — interventions pour organismes de formation</h3>
           <p class="muted">
             Obtention du titre FPA en 2024 via l’OF EducSup. Conception et animation de dispositifs orientés terrain, dans le respect de l’ingénierie pédagogique adultes.
           </p>
 
-          <div class="split">
+          <div class="cols-2">
             <div>
-              <h4 class="card__subtitle">Conception & animation</h4>
+              <h4 class="h4">Mes valeurs</h4>
+              <p class="muted"><strong>Respect</strong>, <strong>Bienveillance</strong>, <strong>Authenticité</strong>.</p>
+
+              <h4 class="h4">Conception &amp; animation</h4>
               <ul class="bullets">
                 <li>IA appliquée (Poulpe Média)</li>
                 <li>Recrutement saisonnier (Mode SARL)</li>
-                <li>Tronc commun “Management opérationnel”</li>
-                <li>“Process de recrutement”</li>
+                <li>Tronc commun « Management opérationnel »</li>
+                <li>« Process de recrutement »</li>
                 <li>RPS</li>
                 <li>Biais cognitifs</li>
               </ul>
             </div>
 
             <div>
-              <h4 class="card__subtitle">Mots-clés (attendus OF)</h4>
-              <div class="tags">
-                <span class="tag tag--a">Écoute</span>
-                <span class="tag tag--a">Adaptabilité</span>
-                <span class="tag tag--a">Pédagogie</span>
-                <span class="tag tag--a">Analyse</span>
-                <span class="tag tag--a">Posture</span>
-                <span class="tag tag--a">Clarté</span>
-              </div>
-
-              <h4 class="card__subtitle" style="margin-top:14px;">Mes valeurs</h4>
-              <div class="tags">
-                <span class="tag tag--soft">Respect</span>
-                <span class="tag tag--soft">Bienveillance</span>
-                <span class="tag tag--soft">Authenticité</span>
+              <h4 class="h4">Mots-clés (attendus OF)</h4>
+              <div class="pillset">
+                <span class="pill pill--coral">Écoute</span>
+                <span class="pill pill--coral">Adaptabilité</span>
+                <span class="pill pill--coral">Pédagogie</span>
+                <span class="pill pill--coral">Analyse</span>
+                <span class="pill pill--coral">Posture</span>
+                <span class="pill pill--coral">Clarté</span>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- PILIER MANAGEMENT -->
-        <article class="card card--accent-b">
-          <h3 class="card__title">20 ans de management & développement des compétences (2004–2024)</h3>
+        <!-- Management -->
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">20 ans de management &amp; développement des compétences (2004–2024)</h3>
           <p class="muted">Management d’équipes, recrutement, formation interne et accompagnement de la performance dans des environnements exigeants.</p>
 
-          <div class="split">
+          <div class="cols-2">
             <div>
-              <h4 class="card__subtitle">Axes pilotés</h4>
+              <h4 class="h4">Axes pilotés</h4>
               <ul class="bullets">
                 <li>Pilotage de la performance</li>
                 <li>Recrutement</li>
                 <li>Formation continue</li>
               </ul>
 
-              <h4 class="card__subtitle" style="margin-top:14px;">Repères terrain (en bref)</h4>
+              <h4 class="h4">Repères terrain (en bref)</h4>
               <ul class="bullets">
-                <li><strong>100+</strong> collaborateurs accompagnés</li>
+                <li><strong>100+ collaborateurs</strong> accompagnés</li>
                 <li><strong>3 villes</strong> : Toulouse • Nancy • Bordeaux</li>
-                <li><strong>B2B</strong> : télévente & terrain</li>
-                <li><strong>5</strong> changements majeurs de stratégie pilotés</li>
+                <li><strong>B2B</strong> : télévente &amp; terrain</li>
+                <li><strong>5 changements</strong> majeurs de stratégie pilotés</li>
               </ul>
             </div>
 
             <div>
-              <h4 class="card__subtitle">Mots-clés transférables</h4>
-              <div class="tags">
-                <span class="tag tag--b">Leadership</span>
-                <span class="tag tag--b">Accompagnement</span>
-                <span class="tag tag--b">Coaching</span>
-                <span class="tag tag--b">Développement</span>
-                <span class="tag tag--b">Recul</span>
-                <span class="tag tag--b">Fédérer</span>
+              <h4 class="h4">Mots-clés transférables</h4>
+              <div class="pillset">
+                <span class="pill pill--green">Leadership</span>
+                <span class="pill pill--green">Accompagnement</span>
+                <span class="pill pill--green">Coaching</span>
+                <span class="pill pill--green">Développement</span>
+                <span class="pill pill--green">Recul</span>
+                <span class="pill pill--green">Fédérer</span>
               </div>
             </div>
           </div>
@@ -212,178 +205,160 @@
     </section>
 
     <!-- EXPERTISES -->
-    <section class="section" aria-label="Expertises clés">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">🧠</span> Expertises clés</h2>
-        <p class="section__subtitle">Repères concrets et directement mobilisables.</p>
+    <section class="section" id="expertises">
+      <header class="section__head">
+        <h2 class="section__title">🧠 Expertises clés</h2>
+        <p class="section__desc">Repères concrets et directement mobilisables.</p>
       </header>
 
       <div class="grid-3">
-        <article class="card card--soft">
-          <h3 class="card__title">Management</h3>
+        <article class="card card--stripe stripe--lime">
+          <h3 class="h3">Management</h3>
           <p class="muted">Posture, efficacité opérationnelle, régulation.</p>
         </article>
-
-        <article class="card card--soft">
-          <h3 class="card__title">Recrutement</h3>
-          <p class="muted">Évaluation, entretien, intégration.</p>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Recrutement</h3>
+          <p class="muted">Évaluation, entretien, décision, intégration.</p>
         </article>
-
-        <article class="card card--soft">
-          <h3 class="card__title">RPS</h3>
+        <article class="card card--stripe stripe--lime">
+          <h3 class="h3">RPS</h3>
           <p class="muted">Prévention, signaux faibles, actions concrètes.</p>
         </article>
-
-        <article class="card card--soft">
-          <h3 class="card__title">Biais cognitifs</h3>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Biais cognitifs</h3>
           <p class="muted">Décision, attention, erreurs à débusquer.</p>
         </article>
-
-        <article class="card card--soft">
-          <h3 class="card__title">Performance collective</h3>
+        <article class="card card--stripe stripe--lime">
+          <h3 class="h3">Performance collective</h3>
           <p class="muted">Cadre, coopération, engagement.</p>
         </article>
-
-        <article class="card card--soft">
-          <h3 class="card__title">Ingénierie pédagogique</h3>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Ingénierie pédagogique</h3>
           <p class="muted">Objectifs, progression, adaptation, évaluation intégrée.</p>
         </article>
       </div>
     </section>
 
     <!-- OUTILS -->
-    <section class="section" aria-label="Outils & environnement numérique">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">🧰</span> Outils & environnement numérique (maîtrisé)</h2>
-        <p class="section__subtitle">Organisation simple, usage opérationnel en animation et en conception.</p>
+    <section class="section" id="outils">
+      <header class="section__head">
+        <h2 class="section__title">🧰 Outils &amp; environnement numérique (maîtrisé)</h2>
+        <p class="section__desc">Organisation simple, usage opérationnel en animation et en conception.</p>
       </header>
 
       <div class="grid-3">
-        <article class="card card--accent-c">
-          <h3 class="card__title">Création & supports</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Création &amp; supports</h3>
           <p class="muted">Canva • PowerPoint</p>
         </article>
-
-        <article class="card card--accent-c">
-          <h3 class="card__title">Collaboration, organisation & partage</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Collaboration, organisation &amp; partage</h3>
           <p class="muted">Trello • Google Drive • OneDrive</p>
         </article>
-
-        <article class="card card--accent-c">
-          <h3 class="card__title">Communication & distanciel</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Communication &amp; distanciel</h3>
           <p class="muted">Google Meet • Microsoft Teams</p>
         </article>
-
-        <article class="card card--accent-c">
-          <h3 class="card__title">Évaluation & animation</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Évaluation &amp; animation</h3>
           <p class="muted">Kahoot • Klaxoon</p>
         </article>
-
-        <article class="card card--accent-c">
-          <h3 class="card__title">IA appliquée</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">IA appliquée</h3>
           <p class="muted">ChatGPT • Gemini • Mistral</p>
         </article>
-
-        <article class="card card--accent-c">
-          <h3 class="card__title">Suite bureautique</h3>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Suite bureautique</h3>
           <p class="muted">Docs • Sheets • Slides • Excel</p>
         </article>
       </div>
     </section>
 
     <!-- ENGAGEMENTS -->
-    <section class="section" aria-label="Engagements & projets">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">🚀</span> Engagements & projets</h2>
-        <p class="section__subtitle">Activités et projets en cohérence avec la transmission et le collectif.</p>
+    <section class="section" id="engagements">
+      <header class="section__head">
+        <h2 class="section__title">🚀 Engagements &amp; projets</h2>
+        <p class="section__desc">Activités et projets en cohérence avec la transmission et le collectif.</p>
       </header>
 
       <div class="grid-3">
-        <article class="card">
-          <h3 class="card__title">Flow Buster</h3>
-          <p><strong>Fondateur</strong> — organisme & marque de formation.</p>
+        <article class="card card--stripe stripe--coral">
+          <h3 class="h3">Flow Buster</h3>
+          <p class="muted"><strong>Fondateur</strong> — organisme &amp; marque de formation.</p>
         </article>
-
-        <article class="card">
-          <h3 class="card__title">Handball</h3>
-          <p>Coach (-13) & partenaire Bruges Handball</p>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Handball</h3>
+          <p class="muted">Coach (-13) &amp; partenaire Bruges Handball</p>
         </article>
-
-        <article class="card">
-          <h3 class="card__title">Bordeaux Confidentiel</h3>
-          <p>Cofondateur</p>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Bordeaux Confidentiel</h3>
+          <p class="muted">Cofondateur</p>
         </article>
-
-        <article class="card">
-          <h3 class="card__title">Octopod</h3>
-          <p>Co-animateur du podcast</p>
+        <article class="card card--stripe stripe--coral">
+          <h3 class="h3">Octopod</h3>
+          <p class="muted">Co-animateur du podcast</p>
         </article>
-
-        <article class="card">
-          <h3 class="card__title">Coach Buster</h3>
-          <p>Cofondateur (podcast & blog)</p>
+        <article class="card card--stripe stripe--yellow">
+          <h3 class="h3">Coach Buster</h3>
+          <p class="muted">Cofondateur (podcast &amp; blog)</p>
         </article>
-
-        <article class="card">
-          <h3 class="card__title">Réseau entrepreneurs</h3>
-          <p>Échanges, veille, entraide.</p>
+        <article class="card card--stripe stripe--green">
+          <h3 class="h3">Réseau entrepreneurs</h3>
+          <p class="muted">Échanges, veille, entraide.</p>
         </article>
       </div>
     </section>
 
     <!-- CENTRES D'INTERET -->
-    <section class="section" aria-label="Centres d’intérêt">
-      <header class="section__header">
-        <h2 class="section__title"><span class="section__icon" aria-hidden="true">💚</span> Centres d’intérêt</h2>
-        <p class="section__subtitle">
-          <strong>À explorer :</strong> cliquez sur un bouton pour afficher le détail.
-        </p>
+    <section class="section" id="interets">
+      <header class="section__head">
+        <h2 class="section__title">💚 Centres d’intérêt</h2>
+        <p class="section__desc">À explorer : cliquez sur un bouton pour afficher le détail.</p>
       </header>
 
-      <div class="interest-toolbar" role="group" aria-label="Boutons centres d’intérêt">
+      <div class="interest-bar" role="group" aria-label="Centres d’intérêt (boutons)">
         <button class="interest-btn" type="button" data-modal="cinema">
-          <span aria-hidden="true">🎬</span> Cinéma / séries
+          <span class="emoji" aria-hidden="true">🎬</span> Cinéma / séries
         </button>
         <button class="interest-btn" type="button" data-modal="musique">
-          <span aria-hidden="true">🎧</span> Musique
+          <span class="emoji" aria-hidden="true">🎧</span> Musique
         </button>
         <button class="interest-btn" type="button" data-modal="padel">
-          <span aria-hidden="true">🎾</span> Padel
+          <span class="emoji" aria-hidden="true">🎾</span> Padel
         </button>
         <button class="interest-btn" type="button" data-modal="run">
-          <span aria-hidden="true">🏃</span> Run
+          <span class="emoji" aria-hidden="true">🏃</span> Run
         </button>
         <button class="interest-btn" type="button" data-modal="jeux">
-          <span aria-hidden="true">🎲</span> Jeux de société
+          <span class="emoji" aria-hidden="true">🎲</span> Jeux de société
         </button>
-        <button class="interest-btn" type="button" data-modal="section">
-          <span aria-hidden="true">🏉</span> Section Paloise
+        <button class="interest-btn" type="button" data-modal="paloise">
+          <span class="emoji" aria-hidden="true">🏉</span> Section Paloise
         </button>
         <button class="interest-btn" type="button" data-modal="pere">
-          <span aria-hidden="true">👨‍👧‍👦</span> Père de deux enfants
+          <span class="emoji" aria-hidden="true">👨‍👧‍👦</span> Père de deux enfants
         </button>
+      </div>
+
+      <!-- Modal (unique) -->
+      <div class="modal" id="interestModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal__backdrop" data-close="1"></div>
+        <div class="modal__panel" role="document">
+          <button class="modal__close" type="button" aria-label="Fermer" data-close="1">✕</button>
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <div class="modal__content" id="modalContent"></div>
+        </div>
       </div>
     </section>
 
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© Flow Buster — Profil formateur</span>
+        <a class="footer__link" href="#contenu">Remonter</a>
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <div>© Flow Buster — Profil formateur</div>
-      <a class="footer__link" href="#contenu">Remonter</a>
-    </div>
-  </footer>
-
-  <!-- MODAL -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal__backdrop" data-close="1"></div>
-    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal__close" type="button" aria-label="Fermer" data-close="1">✕</button>
-      <h3 class="modal__title" id="modalTitle"></h3>
-      <div class="modal__content" id="modalContent"></div>
-    </div>
-  </div>
-
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
