@@ -307,65 +307,69 @@
     <section class="section" id="passions">
       <header class="section__header">
         <h2><span class="emoji" aria-hidden="true">💚</span>Centres d’intérêt</h2>
-        <p class="muted">Une touche personnelle, sobre, lisible.</p>
-      </header>
+       <!-- CENTRES D’INTÉRÊT -->
+<section id="passions" class="section">
+  <h2>💚 Centres d’intérêt</h2>
 
-      <div class="tabs" data-tabs>
-        <div class="tablist" role="tablist" aria-label="Centres d’intérêt">
-          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-target="#p-cinema">🎬 Cinéma / séries</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-musique">🎧 Musique</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-padel">🎾 Padel</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-run">🏃 Run</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-jeux">🎲 Jeux de société</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-section">🏉 Section Paloise</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-target="#p-pere">👨‍👧‍👦 Père de deux enfants</button>
-        </div>
+  <p class="passions-intro">
+    Cliquez sur une passion pour en savoir plus.<br>
+    Certaines sont sérieuses. D’autres beaucoup moins.
+  </p>
 
-        <div class="panels">
-          <div class="panel" id="p-cinema">
-            <h3>🎬 Cinéma / séries</h3>
-            <p>Paul Thomas Anderson, Wes Anderson, Scorsese, Ridley Scott, les frères Coen, Lynch…</p>
-            <p class="muted">Environ 70 jours de visionnage cumulés.</p>
-          </div>
+  <div class="passions-buttons">
+    <button class="passion-btn" data-target="#p-cinema">🎬 Cinéma / séries</button>
+    <button class="passion-btn" data-target="#p-musique">🎧 Musique</button>
+    <button class="passion-btn" data-target="#p-padel">🎾 Padel</button>
+    <button class="passion-btn" data-target="#p-run">🏃 Run</button>
+    <button class="passion-btn" data-target="#p-jeux">🎲 Jeux de société</button>
+    <button class="passion-btn" data-target="#p-section">🏉 Section Paloise</button>
+    <button class="passion-btn" data-target="#p-pere">👨‍👧‍👦 Père de deux enfants</button>
+  </div>
 
-          <div class="panel" id="p-musique" hidden>
-            <h3>🎧 Musique</h3>
-            <p>Culture pop/rock, écoute régulière et concerts.</p>
-            <p class="muted">Top 1% écoute Radiohead &amp; The Strokes (2025), ~800 artistes, 8 concerts.</p>
-          </div>
+  <div class="passions-content">
+    <div id="p-cinema" class="passion-panel" hidden>
+      <h3>Cinéma / séries</h3>
+      <p>Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Ridley Scott, les frères Coen, Lynch…</p>
+      <p>Environ 70 jours de visionnage cumulés.</p>
+    </div>
 
-          <div class="panel" id="p-padel" hidden>
-            <h3>🎾 Padel</h3>
-            <p>Niveau affiché élevé avant d’entrer sur la piste.</p>
-            <p class="muted">Puis la réalité rappelle qu’une marge de progression confortable existe.</p>
-          </div>
+    <div id="p-musique" class="passion-panel" hidden>
+      <h3>Musique</h3>
+      <p>Les Anglais au-dessus de la mêlée. Radiohead, The Strokes.</p>
+      <p>Top 1% d’écoute en 2025. 800 artistes, 8 concerts.</p>
+    </div>
 
-          <div class="panel" id="p-run" hidden>
-            <h3>🏃 Run</h3>
-            <p>Environ 20 km/semaine.</p>
-            <p class="muted">Avant : motivation variable. Après : esprit nettement plus stable.</p>
-          </div>
+    <div id="p-padel" class="passion-panel" hidden>
+      <h3>Padel</h3>
+      <p>Niveau 8 avant d’entrer sur la piste.</p>
+      <p>Les premières balles finissent sur la vitre. Excellente marge de progression.</p>
+    </div>
 
-          <div class="panel" id="p-jeux" hidden>
-            <h3>🎲 Jeux de société</h3>
-            <p>Partage, rire, et engagement.</p>
-            <p class="muted">Objectif secondaire : gagner avec élégance.</p>
-          </div>
+    <div id="p-run" class="passion-panel" hidden>
+      <h3>Run</h3>
+      <p>20 km par semaine. Feignant avant, content après.</p>
+      <p>Les genoux grincent, l’esprit respire.</p>
+    </div>
 
-          <div class="panel" id="p-section" hidden>
-            <h3>🏉 Section Paloise</h3>
-            <p>Supporter de longue date.</p>
-            <p class="muted">Résilience sportive et mauvaise foi mesurée (selon les saisons).</p>
-          </div>
+    <div id="p-jeux" class="passion-panel" hidden>
+      <h3>Jeux de société</h3>
+      <p>Pour partager, rire… et gagner.</p>
+      <p>Jamais mauvais joueur. Très engagé.</p>
+    </div>
 
-          <div class="panel" id="p-pere" hidden>
-            <h3>👨‍👧‍👦 Père de deux enfants</h3>
-            <p>Apprentissage intensif 24/7.</p>
-            <p class="muted">Bonheur, fierté, patience, adaptation… et beaucoup d’amour.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="p-section" class="passion-panel" hidden>
+      <h3>Section Paloise</h3>
+      <p>35 ans de fidélité, zéro titre, beaucoup de mauvaise foi assumée.</p>
+      <p>2026 s’annonce prometteur.</p>
+    </div>
+
+    <div id="p-pere" class="passion-panel" hidden>
+      <h3>Père de deux enfants</h3>
+      <p>Aucun module ne prépare à ça.</p>
+      <p>Bonheur, fatigue, patience, adaptation. Beaucoup d’amour.</p>
+    </div>
+  </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="footer">
