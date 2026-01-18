@@ -5,7 +5,7 @@ const DATA = {
     title: "🎬 Cinéma / séries",
     text:
       "Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Jaoui/Bacri, Ridley Scott, les frères Coen, Tarantino, Lynch… " +
-      "Pluribus, Last of us,Fleabag, The Wire, Breacking Bad, The Office, The Boys..."
+      "Pluribus, Fleabag, The Wire, Breacking Bad, The Office, The Boys..."
       "Environ 140 jours de visionnage sur une vie (je vous laisse faire le calcul)."
   },
   musique: {
