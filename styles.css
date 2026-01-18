@@ -350,7 +350,56 @@ a:hover{ text-decoration:underline; }
   border: 1px solid rgba(15,23,42,.12);
   background: rgba(255,255,255,.72);
 }
+/* Reveal on scroll */
+.reveal{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .55s ease, transform .55s ease;
+  will-change: opacity, transform;
+}
+.reveal.in{
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Premium hover */
+.card{
+  transition: transform .14s ease, box-shadow .18s ease, background .18s ease, outline-color .18s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 26px 60px rgba(15,23,42,.14);
+}
+
+/* Glow discret selon accent */
+.card.accent[data-accent="coral"]:hover{ outline: 2px solid rgba(232,96,88,.18); }
+.card.accent[data-accent="yellow"]:hover{ outline: 2px solid rgba(240,184,88,.20); }
+.card.accent[data-accent="mint"]:hover{ outline: 2px solid rgba(144,192,168,.22); }
+.card.accent[data-accent="lime"]:hover{ outline: 2px solid rgba(232,240,192,.45); }
+
+/* Buttons "cliquables" */
+.interest-btn{
+  transition: transform .10s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+}
+.interest-btn:active{
+  transform: translateY(1px) scale(.99);
+}
+
+/* Panel pop-up: petite entrée */
+.interest-panel.is-open{
+  animation: panelIn .22s ease;
+}
+@keyframes panelIn{
+  from{ opacity:0; transform: translateY(6px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+
+/* Respect préférence utilisateur */
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition: none; transform: none; opacity: 1; }
+  .card, .interest-btn{ transition: none; }
+  .interest-panel.is-open{ animation: none; }
+}
 /* ====== Responsive ====== */
 @media (max-width: 980px){
   .cards-3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
