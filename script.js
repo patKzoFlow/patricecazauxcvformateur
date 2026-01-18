@@ -4,15 +4,16 @@ const DATA = {
   cinema: {
     title: "🎬 Cinéma / séries",
     text:
-      "Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Ridley Scott, les frères Coen, Lynch… " +
-      "Il y en a trop. Environ 70 jours de visionnage sur une vie (je vous laisse faire le calcul)."
+      "Paul Thomas Anderson, Wes Anderson, Scorsese (pas Anderson), Jaoui/Bacri, Ridley Scott, les frères Coen, Tarantino, Lynch… " +
+      "Pluribus, Last of us,Fleabag, The Wire, Breacking Bad, The Office, The Boys..."
+      "Environ 140 jours de visionnage sur une vie (je vous laisse faire le calcul)."
   },
   musique: {
     title: "🎧 Musique",
     text:
       "Ça fait mal de le dire, mais les anglais sont au-dessus de la mêlée. " +
       "Dans les 1% qui ont le plus écouté Radiohead et The Strokes en 2025, " +
-      "800 artistes écoutés et 8 concerts (source Deezer… et moi)."
+      "800 artistes écoutés et 8 concerts la même année (source Deezer… et moi)."
   },
   padel: {
     title: "🎾 Padel",
