@@ -127,3 +127,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// Premium reveal on scroll (Option A)
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(
+    ".card, .interest-panel, .hero-photo, .hero-content, .section-title"
+  );
+
+  // Si navigateur ancien => on affiche direct
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach(el => el.classList.add("in"));
+    return;
+  }
+
+  targets.forEach(el => el.classList.add("reveal"));
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  targets.forEach(el => obs.observe(el));
+});
