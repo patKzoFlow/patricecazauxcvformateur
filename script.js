@@ -1,19 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".passion-btn");
-  const panels = document.querySelectorAll(".passion-panel");
+  const buttons = Array.from(document.querySelectorAll(".passion-btn"));
+  const panels = Array.from(document.querySelectorAll(".passion-panel"));
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-target");
+  // Sécurité : tout masquer au chargement
+  panels.forEach(p => (p.hidden = true));
+  buttons.forEach(b => {
+    b.classList.remove("is-active");
+    b.setAttribute("aria-selected", "false");
+  });
 
-      panels.forEach(p => p.hidden = true);
-      buttons.forEach(b => b.classList.remove("is-active"));
+  const openPanel = (btn) => {
+    const id = btn.getAttribute("data-target");
+    if (!id) return;
 
-      const panel = document.querySelector(target);
-      if (panel) {
-        panel.hidden = false;
-        btn.classList.add("is-active");
-      }
+    const panel = document.getElementById(id);
+    if (!panel) return;
+
+    // Ferme tout
+    panels.forEach(p => (p.hidden = true));
+    buttons.forEach(b => {
+      b.classList.remove("is-active");
+      b.setAttribute("aria-selected", "false");
     });
+
+    // Ouvre cible
+    panel.hidden = false;
+    btn.classList.add("is-active");
+    btn.setAttribute("aria-selected", "true");
+
+    // Focus doux pour accessibilité (et feedback utilisateur)
+    panel.focus({ preventScroll: false });
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => openPanel(btn));
   });
 });
