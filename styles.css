@@ -255,39 +255,44 @@ h4{
   .split{ grid-template-columns: 1fr; }
 }
 
-/* Tabs (Passions) */
-.tabs{
-  background: rgba(255,255,255,.65);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+.passions-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
-.tablist{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-  padding: 14px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(246,247,251,.85);
+
+.passions-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
-.tab{
-  border: 1px solid var(--line);
-  background: white;
+
+.passion-btn {
+  padding: 0.7rem 1.2rem;
   border-radius: 999px;
-  padding: 10px 14px;
-  font-weight: 850;
+  border: 1px solid var(--accent);
+  background: white;
   cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
-.tab:hover{ background: rgba(15,23,42,.03); }
-.tab.is-active{
-  background: rgba(144,192,168,.22);
-  border-color: rgba(144,192,168,.45);
+
+.passion-btn:hover,
+.passion-btn.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
-.panels{ padding: 18px; }
-.panel h3{ font-size: 22px; margin-bottom: 8px; }
-.panel p{ margin: 8px 0 0; line-height: 1.6; }
-.panel[hidden]{ display:none !important; }
+
+.passion-panel {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 
 /* Footer */
 .footer{
