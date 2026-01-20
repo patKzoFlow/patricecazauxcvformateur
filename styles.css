@@ -479,4 +479,15 @@ a:hover{ text-decoration:underline; }
   align-items: center;
   gap: 12px;
 }
+.section-title--icon{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
+.section-title--icon .section-icon{
+  font-size: 40px;          /* 🔥 même ordre de grandeur que les autres icônes */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
