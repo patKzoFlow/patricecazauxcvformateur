@@ -412,23 +412,12 @@ a:hover{ text-decoration:underline; }
   .split{ grid-template-columns: 1fr; }
 }
 /* =========================
-   Avis / Témoignages
+   Avis / Témoignages – Flow Buster accents
    ========================= */
 
-.section-testimonials{
-  padding-top: 40px;
-}
-
-.testimonials{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
 .testimonial-pill{
-  max-width: 360px;
-  padding: 16px 18px;
+  position: relative;
+  padding: 16px 18px 16px 22px;
   border-radius: 999px;
   background: #ffffff;
   border: 1px solid var(--border);
@@ -436,18 +425,29 @@ a:hover{ text-decoration:underline; }
   text-align: center;
 }
 
-.testimonial-text{
-  margin: 0;
-  font-size: 14.5px;
-  line-height: 1.45;
-  color: var(--text);
-  font-weight: 500;
+/* Liseré */
+.testimonial-pill::before{
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  border-radius: 4px;
+  background: var(--accent-coral);
 }
 
-.testimonial-author{
-  display: block;
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 700;
+/* Alternance Flow Buster */
+.testimonial-pill:nth-child(4n+1)::before{
+  background: var(--accent-coral);
+}
+.testimonial-pill:nth-child(4n+2)::before{
+  background: var(--accent-yellow);
+}
+.testimonial-pill:nth-child(4n+3)::before{
+  background: var(--accent-mint);
+}
+.testimonial-pill:nth-child(4n+4)::before{
+  background: var(--accent-lime);
 }
