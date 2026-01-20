@@ -412,40 +412,46 @@ a:hover{ text-decoration:underline; }
   .split{ grid-template-columns: 1fr; }
 }
 /* =========================
-   Avis / Témoignages – liserés Flow Buster (OK)
+   Témoignages (cards + liserés Flow Buster)
    ========================= */
 
-.testimonial-pill{
+.cards--testimonials .card{
+  padding: 22px 22px 18px;
+}
+
+.quote{
+  margin: 0;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.quote-author{
+  margin: 14px 0 0;
+  font-weight: 700;
+  color: var(--title);
+}
+
+/* Liserés colorés (même logique que tes autres blocs) */
+.card--accent{
   position: relative;
-  padding: 16px 18px 16px 24px; /* un peu plus à gauche pour le liseré */
-  border-radius: 999px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 28px rgba(15,23,42,.08);
-  text-align: center;
+  border-left: 10px solid transparent; /* sera coloré par nth-child */
 }
 
-/* Liseré gauche */
-.testimonial-pill::before{
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 14px;
-  bottom: 14px;               /* plus fiable que height:% */
-  width: 5px;
-  border-radius: 6px;
-  background: var(--coral);   /* valeur par défaut */
-  opacity: .9;
+/* Alternance Flow Buster */
+.cards--testimonials .card--accent:nth-child(4n + 1){ border-left-color: var(--corail); }
+.cards--testimonials .card--accent:nth-child(4n + 2){ border-left-color: var(--jaune); }
+.cards--testimonials .card--accent:nth-child(4n + 3){ border-left-color: var(--vert); }
+.cards--testimonials .card--accent:nth-child(4n + 4){ border-left-color: var(--vert-clair); }
+
+/* Un peu de relief premium sans tout casser */
+.cards--testimonials .card--accent{
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
 }
 
-/* Alternance Flow Buster (tes variables) */
-.testimonial-pill:nth-child(4n+1)::before{ background: var(--coral); }
-.testimonial-pill:nth-child(4n+2)::before{ background: var(--yellow); }
-.testimonial-pill:nth-child(4n+3)::before{ background: var(--mint); }
-.testimonial-pill:nth-child(4n+4)::before{ background: var(--lime); }
-
-/* Petit plus premium au survol */
-.testimonial-pill:hover{
-  box-shadow: 0 18px 40px rgba(15,23,42,.12);
-  transform: translateY(-1px);
-  transition: transform .12s ease, box-shadow .18s ease;
+/* Responsive : garder des "pastilles", pas des bandeaux */
+@media (max-width: 720px){
+  .quote{ font-size: 15px; }
+}
