@@ -412,42 +412,40 @@ a:hover{ text-decoration:underline; }
   .split{ grid-template-columns: 1fr; }
 }
 /* =========================
-   Avis / Témoignages – Flow Buster accents
+   Avis / Témoignages – liserés Flow Buster (OK)
    ========================= */
 
 .testimonial-pill{
   position: relative;
-  padding: 16px 18px 16px 22px;
+  padding: 16px 18px 16px 24px; /* un peu plus à gauche pour le liseré */
   border-radius: 999px;
-  background: #ffffff;
+  background: rgba(255,255,255,.86);
   border: 1px solid var(--border);
   box-shadow: 0 10px 28px rgba(15,23,42,.08);
   text-align: center;
 }
 
-/* Liseré */
+/* Liseré gauche */
 .testimonial-pill::before{
   content: "";
   position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 60%;
-  border-radius: 4px;
-  background: var(--accent-coral);
+  left: 10px;
+  top: 14px;
+  bottom: 14px;               /* plus fiable que height:% */
+  width: 5px;
+  border-radius: 6px;
+  background: var(--coral);   /* valeur par défaut */
+  opacity: .9;
 }
 
-/* Alternance Flow Buster */
-.testimonial-pill:nth-child(4n+1)::before{
-  background: var(--accent-coral);
-}
-.testimonial-pill:nth-child(4n+2)::before{
-  background: var(--accent-yellow);
-}
-.testimonial-pill:nth-child(4n+3)::before{
-  background: var(--accent-mint);
-}
-.testimonial-pill:nth-child(4n+4)::before{
-  background: var(--accent-lime);
-}
+/* Alternance Flow Buster (tes variables) */
+.testimonial-pill:nth-child(4n+1)::before{ background: var(--coral); }
+.testimonial-pill:nth-child(4n+2)::before{ background: var(--yellow); }
+.testimonial-pill:nth-child(4n+3)::before{ background: var(--mint); }
+.testimonial-pill:nth-child(4n+4)::before{ background: var(--lime); }
+
+/* Petit plus premium au survol */
+.testimonial-pill:hover{
+  box-shadow: 0 18px 40px rgba(15,23,42,.12);
+  transform: translateY(-1px);
+  transition: transform .12s ease, box-shadow .18s ease;
