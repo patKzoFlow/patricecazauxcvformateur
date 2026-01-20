@@ -411,3 +411,43 @@ a:hover{ text-decoration:underline; }
   .two-col{ grid-template-columns: 1fr; }
   .split{ grid-template-columns: 1fr; }
 }
+/* =========================
+   Avis / Témoignages
+   ========================= */
+
+.section-testimonials{
+  padding-top: 40px;
+}
+
+.testimonials{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.testimonial-pill{
+  max-width: 360px;
+  padding: 16px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 28px rgba(15,23,42,.08);
+  text-align: center;
+}
+
+.testimonial-text{
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.testimonial-author{
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+}
