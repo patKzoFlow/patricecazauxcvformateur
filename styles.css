@@ -474,3 +474,9 @@ a:hover{ text-decoration:underline; }
   font-weight: 700;
   color: var(--title, #0f172a);
 }
+.section-title--icon{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
